@@ -2,15 +2,17 @@
 
 An inquiry form for Tasty Treats, a local bakery
 
+<!-- demo link -->
+[Demo](https://tasty-treat.herokuapp.com/)
+
 ## Development server
 ##### ENVIROMENT VARIABLE
 
 SET `STORAGE_TYPE` to `DB` or `FILE`.
 
-SET `MONGO_URI`.
-
 >  Storage type DB requires MongoDB setup.
 
+SET `MONGO_URI`.
 ##### RUN PROJECT
 Run `npm i` and `npm run build` for a dev server.
 
