@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.config.json",
-    "build": "ng build && node server.js"
+    "build": "ng build --base-href ./ && node server.js"
   },
   "private": true,
   "dependencies": {

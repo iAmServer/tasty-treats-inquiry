@@ -1,6 +1,7 @@
 import { environment } from 'src/environments/environment';
 import { ApiService } from './../services/api.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { RecaptchaComponent } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-form',
@@ -8,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  @ViewChild('captchaRef') captchaRef: RecaptchaComponent;
   inquiry: any = {};
   isSubmitted: boolean = false;
   siteKey = environment.reCaptchaKey;
-  captcha: any = '';
+  captcha: string = '';
 
   constructor(private apiService: ApiService) {}
 
@@ -34,10 +36,12 @@ export class FormComponent implements OnInit {
       (res) => {
         window.alert(res.message);
         this.inquiry = {};
+        this.captchaRef.reset();
         this.isSubmitted = false;
       },
       (err) => {
         this.isSubmitted = false;
+        this.captchaRef.reset();
         window.alert(err.error.message);
       }
     );

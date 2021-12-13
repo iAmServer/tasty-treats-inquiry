@@ -25,7 +25,7 @@
                 </label>
             </div>
             <div class="mb-3">
-                <re-captcha (resolved)="resolved($event)" [siteKey]="siteKey"></re-captcha>
+                <re-captcha (resolved)="resolved($event)" [siteKey]="siteKey" #captchaRef="reCaptcha"></re-captcha>
             </div>
             <button class="w-100 btn btn-primary" type="submit" (click)="onSubmit()" [disabled]="isSubmitted || captcha === ''">Submit Inquiry</button>
         </form>
