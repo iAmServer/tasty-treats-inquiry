@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-12 text-center my-5">
+        <h1 class="h3 mb-1 fw-normal">Tasty Treats</h1>
+        <p class="font-size-11 text-muted mb-3">Inquiry Form</p>
+    </div>
+    <div class="col-12">
+        <form class="form-signin m-auto p-4 p-md-0" autocomplete="off">
+            <div class="form-group mb-3">
+                <label for="email">Email address</label>
+                <input type="email" [(ngModel)]="inquiry.email" class="form-control" id="email" name="email" placeholder="name@example.com" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" [(ngModel)]="inquiry.name" id="name" name="name" placeholder="Jane Doe" />
+            </div>
+    
+            <div class="form-group mb-3">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" [(ngModel)]="inquiry.message" style="resize: none;" rows="10" class="form-control" placeholder="Send message..."></textarea>
+            </div>
+    
+            <div class="checkbox mb-3">
+                <label>
+                <input type="checkbox" name="subccribe" [(ngModel)]="inquiry.isSubscribe"/> Subscribe to our newsletter
+                </label>
+            </div>
+            <div class="mb-3">
+                <re-captcha (resolved)="resolved($event)" [siteKey]="siteKey"></re-captcha>
+            </div>
+            <button class="w-100 btn btn-primary" type="submit" (click)="onSubmit()" [disabled]="isSubmitted || captcha === ''">Submit Inquiry</button>
+        </form>
+    </div>
+</div>

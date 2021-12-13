@@ -10,7 +10,11 @@ export class ApiService {
   baseUrl: string = environment.baseUrl;
   constructor(private http: HttpClient) {}
 
-  testServer(): Observable<any> {
-    return this.http.get(this.baseUrl + 'contact');
+  getInquiries(): Observable<any> {
+    return this.http.get(this.baseUrl + 'all');
+  }
+
+  submitInquiry(data: any): Observable<any> {
+    return this.http.post(this.baseUrl + 'inquiry', data);
   }
 }

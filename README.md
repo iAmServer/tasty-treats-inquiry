@@ -3,10 +3,13 @@
 An inquiry form for Tasty Treats, a local bakery
 
 ## Development server
+##### ENVIROMENT VARIABLE
 
-Run `npm i` and `npm run build` for a dev server. Navigate to `http://localhost:3000/tasty-treats`.
+SET `STORAGE_TYPE` to `DB` or `FILE`.
+SET `MONGO_URI`
+>  Storage type DB requires MongoDB setup.
 
-## Running unit tests
+##### RUN PROJECT
+Run `npm i` and `npm run build` for a dev server.
 
-Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
+Navigate to `http://localhost:3000/`.
