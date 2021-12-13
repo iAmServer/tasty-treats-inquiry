@@ -6,7 +6,9 @@ An inquiry form for Tasty Treats, a local bakery
 ##### ENVIROMENT VARIABLE
 
 SET `STORAGE_TYPE` to `DB` or `FILE`.
-SET `MONGO_URI`
+
+SET `MONGO_URI`.
+
 >  Storage type DB requires MongoDB setup.
 
 ##### RUN PROJECT

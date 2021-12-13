@@ -1,4 +1,6 @@
-const file = `${__dirname}/${process.env.EXCEL_FILE_NAME}`;
+const { dirname } = require("path");
+const appDir = dirname(require.main.filename);
+const file = `${appDir}/${process.env.FILE_NAME}`;
 const fs = require("fs");
 
 const getAll = () => {
