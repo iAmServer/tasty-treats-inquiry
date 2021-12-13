@@ -14,4 +14,6 @@ SET `MONGO_URI`.
 ##### RUN PROJECT
 Run `npm i` and `npm run build` for a dev server.
 
-Navigate to `http://localhost:3000/`.
+Navigate to `http://localhost:3000/inquiry` to fill form.
+
+Navigate to `http://localhost:3000/inquiries/list` to list iquiries from customers.
